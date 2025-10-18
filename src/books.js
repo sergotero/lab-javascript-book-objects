@@ -82,8 +82,9 @@ booksArray.push(book1, book2, book3, book4);
 
 
 // Iteration 2 | Book Details
-function getBookDetails() {
-  // Your code here:
+function getBookDetails(book) {
+  const details = `${book.title.toUpperCase()} - ${book.author.toUpperCase()} - ${book.pages} pages`
+  return details;
 
 }
 
