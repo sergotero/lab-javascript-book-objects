@@ -132,9 +132,21 @@ const dictionary = {
     ],
 };
 
-function booksByAuthor() {
-  // Your code here:
-  
+function booksByAuthor(dictionary) {
+  const result = [];
+  for (const key in dictionary) {
+    const books = dictionary[key];
+    for (let i = 0; i < books.length; i++) {
+      const book = books[i];
+      const opus = {
+        title: book[0],
+        pages: book[1],
+        author: key
+      }
+      result.push(opus);
+    }
+  }
+  return result;
 }
 
 
