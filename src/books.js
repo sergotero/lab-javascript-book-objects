@@ -83,7 +83,7 @@ booksArray.push(book1, book2, book3, book4);
 
 // Iteration 2 | Book Details
 function getBookDetails(book) {
-  const details = `${book.title.toUpperCase()} - ${book.author.toUpperCase()} - ${book.pages} pages`
+  const details = `${book.title} - ${book.author} - ${book.pages} pages`
   return details;
 
 }
@@ -91,7 +91,11 @@ function getBookDetails(book) {
 
 
 // Iteration 3 | Delete Language
-// Your code here:
+for (let i = 0; i < booksArray.length; i++) {
+  const book = booksArray[i];
+  delete book.details["language"];
+  console.log(booksArray);
+}
 
 
 
